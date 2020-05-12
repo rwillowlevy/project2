@@ -3,13 +3,17 @@ $(document).ready(function() {
         //prevent default behavior for button
         event.preventDefault();
 
+        //API ID and Key (these will be hidden in a .env file once we set up the server, but I hard-coded them for now)
+        let apiId = "3da48bfd";
+        let apiKey = "3722fd8077a534619738f0de789cd371";
+
         //links search inputs from HTML
         let city = $("#searchByCity").val();
         let state = $("#searchByState").val();
         let zip = $("#searchByZip").val();
 
         //sets default url if search inputs are all blank
-        let defaultUrl = 'https://api.data.charitynavigator.org/v2/Organizations?app_id=3da48bfd&app_key=3722fd8077a534619738f0de789cd371&pageSize=5'
+        let defaultUrl = `https://api.data.charitynavigator.org/v2/Organizations?app_id=${apiId}&app_key=${apiKey}&pageSize=5`
 
         //the url that actually gets called
         let queryUrl = defaultUrl;
