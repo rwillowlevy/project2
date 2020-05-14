@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    let charitiesArray = [];
+
     $(".search").on("submit", function() {
         //prevent default behavior for button
         event.preventDefault();
@@ -23,7 +25,7 @@ $(document).ready(function() {
             queryUrl = queryUrl.concat("&city=" + city)
         };
         if (state !== "null") {
-            queryUrl = queryUrl.concat("&state=" + state)
+            queryUrl = queryUrl.concat("&state=" + state)s
         };
         if (zip !== '') {
             queryUrl = queryUrl.concat("&zip=" + zip)
@@ -41,11 +43,27 @@ $(document).ready(function() {
 
         //ajax call
         $.ajax(settings).done(function (response) {
+            charitiesArray = [];
             queryUrl = defaultUrl;
             $("#searchByCity").val(null)
             $("#searchByState").val("null")
             $("#searchByZip").val(null)
-            console.log(response);
+
+            response.forEach(charity => {
+                let info = {
+                    name: charity.charityName,
+                    url: charity.charityNavigatorURL,
+                    mailingAddress: [
+                        charity.mailingAddress.streetAddress1,
+                        charity.mailingAddress.city,
+                        charity.mailingAddress.stateOrProvince,
+                        charity.mailingAddress.postalCode
+                    ]
+                }
+                charitiesArray.push(info)
+            });
+
+            console.log(charitiesArray)
 
 //IGNORE THIS SECTION!!! Keeping it here for future use
 //             $(`#symbolDiv`).html(`
@@ -70,4 +88,4 @@ $(document).ready(function() {
 //         });
         });
     });
-});
+})
