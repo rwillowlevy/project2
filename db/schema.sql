@@ -1,14 +1,5 @@
-DROP DATABASE IF EXISTS foundation_form;
+DROP DATABASE IF EXISTS charity_db;
 
-CREATE DATABASE foundation_form;
+CREATE DATABASE charity_db;
 
-USE foundation_form;
-
-CREATE TABLE foundation_form (
-	id INT AUTO_INCREMENT NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    organization_name VARCHAR(50) NOT NULL,
-    website_url VARCHAR(50) NOT NULL,
-    number_of_hits INT NOT NULL,
-    PRIMARY KEY(id)
-);
+USE charity_db;
