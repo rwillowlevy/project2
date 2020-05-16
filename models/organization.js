@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    const organization = sequelize.define('organization', {
+    let Organization = sequelize.define('organization', {
 
         email: {
             type: DataTypes.STRING,
@@ -22,13 +22,6 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: true,
             unique: true
             },
-        
-
-        country: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true
-            },
 
         otherInquiries: {
             type: DataTypes.STRING,
@@ -36,5 +29,5 @@ module.exports = function (sequelize, DataTypes) {
             },
 
         })
-    return organization
+    return Organization
 }

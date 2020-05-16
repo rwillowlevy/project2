@@ -1,6 +1,6 @@
-var path = require("path");
+let path = require("path");
 
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+let authenticateLogin = require("../config/middleware/authenticateLogin");
 
 module.exports = function(app) {
 
@@ -18,7 +18,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../views/html/login.html"));
   });
 
-  app.get("/members", isAuthenticated, function(req, res) {
+  app.get("/members", authenticateLogin, function(req, res) {
     res.sendFile(path.join(__dirname, "../views/html/user.html"));
   });
 
