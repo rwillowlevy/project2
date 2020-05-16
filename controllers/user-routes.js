@@ -4,19 +4,19 @@ let passport = require("../config/passport");
 
 module.exports = function(app) {
   //login route
-  app.post("/api/login", passport.authenticate("local"), function(req, res) {
+  app.post("/user/login", passport.authenticate("local"), function(req, res) {
     res.json(req.user);
   });
 
   //signup route
-  app.post("/api/signup", function(req, res) {
+  app.post("/user/signup", function(req, res) {
     db.User.create({
       email: req.body.email,
       username: req.body.username,
       password: req.body.password
     })
       .then(function() {
-        res.redirect(307, "/api/login");
+        res.redirect(307, "/user/login");
       })
       .catch(function(err) {
         res.status(401).json(err);
@@ -29,8 +29,8 @@ module.exports = function(app) {
     res.redirect("/");
   });
 
-  //user_date route (to pull user data from db for use in frontend)
-  app.get("/api/user_data", function(req, res) {
+  //user_data route (to pull user data from db for use in frontend)
+  app.get("/user/user_data", function(req, res) {
     if (!req.user) {
       res.json({});
     } else {
