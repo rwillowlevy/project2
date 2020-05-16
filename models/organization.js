@@ -19,7 +19,7 @@ module.exports = function (sequelize, DataTypes) {
 
         websiteUrl: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             unique: true
             },
         
@@ -36,5 +36,5 @@ module.exports = function (sequelize, DataTypes) {
             },
 
         })
-    return User
+    return organization
 }
