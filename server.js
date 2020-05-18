@@ -4,9 +4,7 @@ let session = require("express-session");
 let passport = require("passport");
 //import database models here--------------------------
 let db = require("./models");
-//import routes here-----------------------------------
-// require("./controllers/[ROUTE_NAME]");
-require("./controllers/user-routes");
+
 
 //renames express function to app
 let app = express();
@@ -16,14 +14,16 @@ let PORT = process.env.PORT || 5000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-//code for "views" (activate once html pages are done and stored in "views" folder)------------------------------
-// app.use(express.static("views"));
+//code for "views"------------------------------
+app.use(express.static("views"));
 //code for passport.js (user profile and login)--------------------------------
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
-//code for using routes-------------------------------
-// app.use(routes);
+
+//import routes here-----------------------------------
+require("./controllers/user-routes.js")(app);
+require("./controllers/html-routes.js")(app);
 
 //sync database using sequelize and start our server
 db.sequelize.sync().then(function() {

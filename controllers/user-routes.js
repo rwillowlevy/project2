@@ -29,7 +29,7 @@ module.exports = function(app) {
     res.redirect("/");
   });
 
-  //user_data route (to pull user data from db for use in frontend)
+  //user_data route (to pull user data from database for use in frontend)
   app.get("/user/user_data", function(req, res) {
     if (!req.user) {
       res.json({});
