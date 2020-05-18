@@ -1,0 +1,83 @@
+.content{
+
+    padding: 5rem;
+   }
+   
+   body {
+       background-color: bisque;
+   }
+   
+   
+      button {
+       background-color: black; 
+       border: none;
+       color: white;
+       padding: 15px 32px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 16px;
+     }
+   
+   
+   
+   
+     button {
+       background-color: #4CAF50; /* Green */
+       border: none;
+       color: white;
+       padding: 15px 32px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 16px;
+     }
+     input{
+       height: 30px;
+       width: 25%;
+     }
+     
+     html, body {
+       height: 100%;
+       margin: 0;
+       padding: 0;
+       font-family: 'Didact Gothic', serif;
+     }
+             
+
+     
+      button {
+       background-color: #4CAF50; 
+       border: none;
+       color: white;
+       padding: 15px 32px;
+       text-align: center;
+       text-decoration: none;
+       /* display: inline-block; */
+       font-size: 16px;
+     }
+  
+    
+     
+     .topBtn{
+       /* display: inline-block; */
+     }
+   
+   
+   
+   
+     .dropdown-content{
+       width: max-content !important;
+       height:auto !important;
+    }
+   
+    .select-dropdown {
+     max-height: 350px !important;
+     overflow-y: auto !important;
+     backface-visibility: hidden !important;
+   }
+
+   .state-view{
+    height: 100px;
+    width: 50%;
+   }
