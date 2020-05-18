@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "root",
-    "password": "MySQL@8400",
-    "database": "charity_db",
-    "host": "127.0.0.1",
+    "username": "etyndq2fjhnjg742",
+    "password": "yxuq40504yq9n9jw",
+    "database": "y4c7axp0bhmodzdk",
+    "host": "ijj1btjwrd3b7932.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "MySQL@8400",
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "etyndq2fjhnjg742",
+    "password": "yxuq40504yq9n9jw",
+    "database": "y4c7axp0bhmodzdk",
+    "host": "ijj1btjwrd3b7932.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "MySQL@8400",
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "etyndq2fjhnjg742",
+    "password": "yxuq40504yq9n9jw",
+    "database": "y4c7axp0bhmodzdk",
+    "host": "ijj1btjwrd3b7932.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
