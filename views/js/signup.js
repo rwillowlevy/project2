@@ -35,7 +35,7 @@ $(document).ready(function() {
             password: password
         })
         .then(function() {
-            window.location.replace("/members");
+            window.location.replace("/home");
         })
         .catch(handleLoginErr);
     }
@@ -44,4 +44,4 @@ $(document).ready(function() {
       $("#alert .msg").text(err.responseJSON);
       $("#alert").fadeIn(500);
     }
-  });
+});
