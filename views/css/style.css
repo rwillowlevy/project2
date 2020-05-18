@@ -107,7 +107,6 @@ input, textarea {
 
 .charityResults, .chartContainer {
   padding: 10px;
-  border-radius: 10px;
 }
 
 #welcome-text {
@@ -133,6 +132,10 @@ input, textarea {
 
 #signup-form, #login-form {
   padding-bottom: 50px;
+}
+
+#contact-form {
+  padding-top: 15px;
 }
 
 #myChart {

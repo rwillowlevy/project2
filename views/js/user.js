@@ -15,9 +15,9 @@ $(document).ready(function() {
     //Charity Navigator API
     //api id and key hidden in .env
     let apiId = "3da48bfd";
-    // process.env.CHARITY_NAVIGATOR_API_ID || 
+    // process.env.CHARITY_NAVIGATOR_API_ID;
     let apiKey = "3722fd8077a534619738f0de789cd371";
-    // process.env.CHARITY_NAVIGATOR_API_KEY || 
+    // process.env.CHARITY_NAVIGATOR_API_KEY;
 
     //sets default url if search inputs are all blank
     let defaultUrl = `https://api.data.charitynavigator.org/v2/Organizations?app_id=${apiId}&app_key=${apiKey}&pageSize=10`

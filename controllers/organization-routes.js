@@ -17,12 +17,8 @@ module.exports = function(app) {
 
   //user_data route (to pull user data from database for use in frontend)
     app.get("/organization/organization_data", function(req, res) {
-        res.json({
-            email: req.organization.email,
-            organizationName: req.organization.organizationName,
-            websiteUrl: req.organization.websiteUrl,
-            subject: req.organization.subject,
-            id: req.organization.id
+        db.Organization.findAll().then(organization => {
+            res.send(organization)
         });
     });
 };

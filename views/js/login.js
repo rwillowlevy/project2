@@ -7,7 +7,7 @@ $(document).ready(function() {
     //validates fields are not blank
     loginForm.on("submit", function(event) {
         event.preventDefault();
-            let userData = {
+        let userData = {
             username: usernameInput.val().trim(),
             password: passwordInput.val().trim()
         };
@@ -22,7 +22,7 @@ $(document).ready(function() {
         passwordInput.val("");
     });
 
-    //post to user/login route and redirect to member page
+    //post to user/login route and redirect to homepage
     function loginUser(username, password) {
         $.post("/user/login", {
             username: username,

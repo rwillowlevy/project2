@@ -20,14 +20,7 @@ module.exports = function(app) {
       })
       .catch(function(err) {
         res.status(401).json(err);
-        alert("Username must be at least 6 characters.")
       });
-  });
-
-  //logout route
-  app.get("/logout", function(req, res) {
-    req.logout();
-    res.redirect("/");
   });
 
   //user_data route (to pull user data from database for use in frontend)
