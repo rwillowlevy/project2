@@ -11,6 +11,10 @@ let app = express();
 //set our port
 let PORT = process.env.PORT || 5000;
 
+//hidden keys
+let apiId = process.env.CHARITY_NAVIGATOR_API_ID;
+let apiKey = process.env.CHARITY_NAVIGATOR_API_KEY;
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 //code for "views"------------------------------

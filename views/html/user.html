@@ -1,64 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>COVID Tracking and Charities</title>
+    </head>
+    
+    <body class="grey lighten-2">
+    
+        <nav>
+          <div class="topnav nav-wrapper">
+            <img id="logo" class="responsive-img right" src="cherrytreelogo.png" alt="Cherry Tree Logo">
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="hide-on-med-and-down">
+              <li><a href="/home">Home</a></li>
+              <li><a class="active" href="/members">COVID Tracking and Charities</a></li>
+              <li><a href="/contact_us">Contact Us</a></li>
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </div>
+        </nav>
+    
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="/home">Home</a></li>
+          <li><a class="active" href="/members">COVID Tracking and Charities</a></li>
+          <li><a href="/contact_us">Contact Us</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Charity Search</title>
-</head>
-
-<body>
-    <div class="header">
-        <div class="section">
+        <div class="container">
             <div class="row">
                 <div class="col s12"></div>
-                <h3>Search for Charities and COVID Information Using the Parameters Below</h3>
+                <h5 class="center pink-text">Search for Charities and COVID Information Below</h5>
             </div>
         </div>
-    </div>
 
-    <div>
-        <div class="row">
-            <form class="search">
-                <label for="searchByCity">By City</label>
-                <input type="text" id="searchByCity" placeholder="Enter City">
-                </br>
-                <label  type="text" for="state-input">By State</label>
-                <input type="text" id="state-input" placeholder="Enter State">
-                </br>
-                <label for="searchByCity">By Zip</label>
-                <input type="text" id="searchByZip" placeholder="Enter Zip">
-                </br>
-                <button type="submit" value="Submit">Submit</button>
-            </form>
+        <div>
+            <div class="container row">
+                <form class="search">
+                    <label for="searchByCity">By City</label>
+                    <input type="text" id="searchByCity" placeholder="Enter City">
+                    </br>
+                    <label  type="text" for="state-input">By State (two-letter)</label>
+                    <input type="text" id="state-input" placeholder="Enter State">
+                    </br>
+                    <label for="searchByCity">By Zip</label>
+                    <input type="text" id="searchByZip" placeholder="Enter Zip">
+                    </br>
+                    <button type="submit" value="Submit">Submit</button>
+                </form>
+            </div>
         </div>
-    </div>
-    
-    <!--state covid info  -->
-    <div class="container">
-        <h1 class= 'hidden'>Updated COVID-19 Information</h1>
-    <canvas id="myChart" width="800" height="450"></canvas>   
-    </div>
-    <div>
-       <h1 class = 'hidden2'>Charites Information</h1>
-    </div>
-    <div class = 'charityResults'>
         
-    <!-- charity info  -->
-       
-   
-    </div>
-    <canvas id="myChart" width="800" height="450"></canvas>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="user.js"></script>
-    <script src="states.js"></script>
-    <script src="charityNavigator.js"></script>
+        <!--state covid info  -->
+        <div class="container row grey-text text-lighten-5">
+            <h3 class="hidden pink-text center ">Updated COVID-19 Information</h3>
+            <div class="hidden chartContainer blue-grey lighten-3">
+                <div class="hidden state"></div>
+                <canvas class="hidden" id="myChart"></canvas>
+            </div>
+        </div>
 
-    
+        <!-- charity info -->
+        <div class="container row grey-text text-lighten-5">
+            <h3 class="hidden2 pink-text center">Charites Information</h3>
+            <div class="hidden2 charityResults blue-grey lighten-3"></div>
+        </div>
 
-</body>
+        <footer class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l5 offset-l1 m6 s12">
+                  <h4 class="white-text">Cherry Tree Team</h4>
+                  <p class="grey-text text-lighten-2">Created by Rachel, Joel, Zaki, and Kyle.</p>
+                </div>
+                <div class="col l4 offset-l2 m4 offset-m2 s9 offset-s3">
+                  <h4 class="white-text">Links</h4>
+                  <ul>
+                    <li><a class="grey-text text-lighten-3" href="https://www.who.int/news-room/campaigns/connecting-the-world-to-combat-coronavirus/healthyathome?gclid=CjwKCAjwwYP2BRBGEiwAkoBpAo9Ld1ZJ05ArZQgZqKfDPRMqRC-lC4doFORe742CMgLVlYOz4K-fBhoCzwEQAvD_BwE">World Health Organization</li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/coronavirus-safety.html">American Red Cross</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.headspace.com/">Headspace Meditation</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.helpguide.org/articles/stress/stress-management.htm">Stress Management</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2020 Copyright The Cherry Tree Team
+              </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="../js/user.js"></script>
+
+    </body>
 
 </html>

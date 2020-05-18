@@ -20,6 +20,7 @@ module.exports = function(app) {
       })
       .catch(function(err) {
         res.status(401).json(err);
+        alert("Username must be at least 6 characters.")
       });
   });
 

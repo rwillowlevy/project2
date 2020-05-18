@@ -11,13 +11,23 @@
     <title>Sign Up</title>
   </head>
 
-  <body>
+  <body class="grey lighten-2">
     
-    <div class="topnav">
-      <img id="logo" class="responsive-img right" src="http://localhost:5000/views/html/cherrytreelogo.png" alt="Cherry Tree Logo">
-      <a href="/">Login</a>
-      <a class="active" href="/signup">Sign Up</a>
-    </div>
+    <nav>
+      <div class="topnav nav-wrapper">
+        <img id="logo" class="responsive-img right" src="cherrytreelogo.png" alt="Cherry Tree Logo">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="hide-on-med-and-down">
+          <li><a href="/">Login</a></li>
+          <li><a class="active" href="/signup">Sign Up</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="/">Login</a></li>
+      <li><a class="active" href="/signup">Sign Up</a></li>
+    </ul>
 
     <div class="container">
 
@@ -51,10 +61,34 @@
 
         <h6>or <a href="/">Log In</a></h6>
 
-      </div>
-
       </form>
+
     </div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l5 offset-l1 m6 s12">
+            <h4 class="white-text">Cherry Tree Team</h4>
+            <p class="grey-text text-lighten-2">Created by Rachel, Joel, Zaki, and Kyle.</p>
+          </div>
+          <div class="col l4 offset-l2 m4 offset-m2 s9 offset-s3">
+            <h4 class="white-text">Links</h4>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="https://www.who.int/news-room/campaigns/connecting-the-world-to-combat-coronavirus/healthyathome?gclid=CjwKCAjwwYP2BRBGEiwAkoBpAo9Ld1ZJ05ArZQgZqKfDPRMqRC-lC4doFORe742CMgLVlYOz4K-fBhoCzwEQAvD_BwE">World Health Organization</li>
+              <li><a class="grey-text text-lighten-3" href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/coronavirus-safety.html">American Red Cross</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.headspace.com/">Headspace Meditation</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.helpguide.org/articles/stress/stress-management.htm">Stress Management</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2020 Copyright The Cherry Tree Team
+        </div>
+      </div>
+    </footer>
 
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
