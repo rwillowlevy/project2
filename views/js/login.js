@@ -7,9 +7,9 @@ $(document).ready(function() {
     //validates fields are not blank
     loginForm.on("submit", function(event) {
         event.preventDefault();
-        let userData = {
-        username: usernameInput.val().trim(),
-        password: passwordInput.val().trim()
+            let userData = {
+            username: usernameInput.val().trim(),
+            password: passwordInput.val().trim()
         };
 
         if (!userData.username || !userData.password) {
@@ -25,8 +25,8 @@ $(document).ready(function() {
     //post to user/login route and redirect to member page
     function loginUser(username, password) {
         $.post("/user/login", {
-        username: username,
-        password: password
+            username: username,
+            password: password
         })
         .then(function() {
             window.location.replace("/members");

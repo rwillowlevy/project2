@@ -30,6 +30,6 @@ module.exports = function (sequelize, DataTypes) {
     //function using bcrypt to hash password before storing to database
     User.addHook("beforeCreate", function(user) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-      });
+    });
     return User;
 }
