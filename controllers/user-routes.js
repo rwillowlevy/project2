@@ -23,12 +23,6 @@ module.exports = function(app) {
       });
   });
 
-  //logout route
-  app.get("/logout", function(req, res) {
-    req.logout();
-    res.redirect("/");
-  });
-
   //user_data route (to pull user data from database for use in frontend)
   app.get("/user/user_data", function(req, res) {
     if (!req.user) {

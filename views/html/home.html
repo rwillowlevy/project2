@@ -13,14 +13,25 @@
 
   <body class="grey lighten-2">
 
-    <div class="topnav">
-      <img id="logo" class="responsive-img right" src="cherrytreelogo.png" alt="Cherry Tree Logo">
-      <a class="active" href="/home">Home</a>
-      <a href="/members">Corona Tracking</a>
-      <a href="/members">Charities</a>
-      <a href="/contact_us">Contact Us</a>
-      <a href="/logout">Logout</a>
-    </div>
+    <nav>
+      <div class="topnav nav-wrapper">
+        <img id="logo" class="responsive-img right" src="https://i.ibb.co/SdfZcmR/cherrytreelogo.png" alt="Cherry Tree Logo">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="hide-on-med-and-down">
+          <li><a class="active" href="/home">Home</a></li>
+          <li><a href="/members">COVID Tracking and Charities</a></li>
+          <li><a href="/contact_us">Contact Us</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a class="active" href="/home">Home</a></li>
+      <li><a href="/members">COVID Tracking and Charities</a></li>
+      <li><a href="/contact_us">Contact Us</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
 
     <div class="row">
       <div class="jumbotron">
@@ -72,14 +83,14 @@
     <footer class="page-footer">
       <div class="container">
         <div class="row">
-          <div class="col l6 s12">
+          <div class="col l5 offset-l1 m6 s12">
             <h4 class="white-text">Cherry Tree Team</h4>
             <p class="grey-text text-lighten-2">Created by Rachel, Joel, Zaki, and Kyle.</p>
           </div>
-          <div class="col l3 offset-l3 s12">
+          <div class="col l4 offset-l2 m4 offset-m2 s9 offset-s3">
             <h4 class="white-text">Links</h4>
             <ul>
-            <li><a class="grey-text text-lighten-3" href="https://www.who.int/news-room/campaigns/connecting-the-world-to-combat-coronavirus/healthyathome?gclid=CjwKCAjwwYP2BRBGEiwAkoBpAo9Ld1ZJ05ArZQgZqKfDPRMqRC-lC4doFORe742CMgLVlYOz4K-fBhoCzwEQAvD_BwE">World Health Organization</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.who.int/news-room/campaigns/connecting-the-world-to-combat-coronavirus/healthyathome?gclid=CjwKCAjwwYP2BRBGEiwAkoBpAo9Ld1ZJ05ArZQgZqKfDPRMqRC-lC4doFORe742CMgLVlYOz4K-fBhoCzwEQAvD_BwE">World Health Organization</li>
               <li><a class="grey-text text-lighten-3" href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/coronavirus-safety.html">American Red Cross</a></li>
               <li><a class="grey-text text-lighten-3" href="https://www.headspace.com/">Headspace Meditation</a></li>
               <li><a class="grey-text text-lighten-3" href="https://www.helpguide.org/articles/stress/stress-management.htm">Stress Management</a></li>
@@ -96,7 +107,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type ="text/javascript" src ="../js/contact.js"></script>
+    <script type ="text/javascript" src ="../js/home.js"></script>
 
   </body>
 </html>
