@@ -14,8 +14,15 @@
   </style>
 </head>
 
-<body>
-
+<body style="background-color: lightgrey;">
+ 
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#Corona">Corona Tracking</a>
+    <a href="#Charity">Charities</a>
+    <a href="#contact">Contact</a>
+  </div>
+  
   <div class="container">
     <h1>State Search</h1>
 
@@ -149,6 +156,56 @@
       renderButtons();
     </script>
   </div>
+    <style>
+h1 {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: palevioletred;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: palevioletred;
+  color: white;
+}
+
+#state-form {
+text-align: center;
+}
+
+#state-input {
+font-size: x-large;
+
+}
+
+#add-state {
+background-color: palevioletred;
+color: white; 
+padding: 15px; 
+align-content: center;
+}
+
+#buttons-view {
+  text-align: center;
+}
+  </style>
 </body>
 
 </html>
