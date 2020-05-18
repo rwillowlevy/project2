@@ -1,106 +1,121 @@
 <!DOCTYPE html>
-<head>
-    <body style="background-color:lightgrey">
-      <img src="cherrytreelogo.jgp" alt="Cherry Tree Logo">
+<html>
+  <head>
+    <style>
+      .topnav {
+        background-color: #333;
+        overflow: hidden;
+      }
 
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
 
-        <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#Corona">Corona Tracking</a>
-            <a href="#Charity">Charities</a>
-            <a href="#contact">Contact</a>
-          </div>
+      .topnav a:hover {
+        background-color: palevioletred;
+        color: black;
+      }
 
-          <header>Contact Us</header>
+      .topnav a.active {
+        background-color: palevioletred;
+        color: white;
+      }
 
+      header {
+          font-size: 25px;
+          color: black;
+          padding-top: 25px;
+          padding-bottom: 25px;
+          text-align: center;
+      }
 
-        <div class="container">
-            <form action="action_page.php">
-          
-              <label for="fname">Email</label>
-              <input type="text" id="email" name="Email" placeholder="Your email..">
-          
-              <label for="lname">Organization Name</label>
-              <input type="text" id="organization-name" name="Organization Name" placeholder="List your organization here..">
+      input[type=text], select, textarea {
+        width: 100%; 
+        padding: 12px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        box-sizing: border-box; 
+        margin-top: 6px;
+        margin-bottom: 16px; 
+        resize: vertical 
+      }
 
-              <label for="lname">Website URL</label>
-              <input type="text" id="website-url" name="Website URL" placeholder="place your URL here..">
-          
-              <label for="subject">Any other inquiries here..</label>
-              <textarea id="subject" name="subject" placeholder="Type something here.." style="height:200px"></textarea>
-          
-              <input type="submit" value="Submit">
-          
-            </form>
-          </div>
+      input[type=submit] {
+        background-color: palevioletred;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
 
+      input[type=submit]:hover {
+        background-color: palevioletred;
+      }
 
-          <style>
+      .container {
+        border-radius: 5px;
+        background-color: lightgrey;
+        padding: 20px;
+      }
+    </style>
 
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-}
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="mobilestyle.css">  -->
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Welcome to Cherry Tree!</title>
+    
+  </head>
 
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+  <body style="background-color:lightgrey">
+    <img src="cherrytreelogo.jgp" alt="Cherry Tree Logo">
 
-.topnav a:hover {
-  background-color: palevioletred;
-  color: black;
-}
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#Corona-Tracking">Corona Tracking</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
 
-.topnav a.active {
-  background-color: palevioletred;
-  color: white;
-}
+    <header>Contact Us</header>
 
-header {
-    font-size: 25px;
-    color: black;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    text-align: center;
-}
+    <div class="container">
+      <form id="contact-form">
+    
+        <label for="email">Email</label>
+        <input type="text" id="email" name="Email" placeholder="Your email..">
+    
+        <label for="organization-name">Organization Name</label>
+        <input type="text" id="organization-name" name="Organization Name" placeholder="List your organization here..">
 
+        <label for="website-url">Website URL</label>
+        <input type="text" id="website-url" name="Website URL" placeholder="place your URL here..">
+    
+        <label for="subject">Any other inquiries here..</label>
+        <textarea id="subject" name="subject" placeholder="Type something here.." style="height:200px"></textarea>
+    
+        <button type="submit">Submit</button>
+    
+      </form>
+    </div>
 
-input[type=text], select, textarea {
-  width: 100%; 
-  padding: 12px; 
-  border: 1px solid #ccc; 
-  border-radius: 4px; 
-  box-sizing: border-box; 
-  margin-top: 6px;
-  margin-bottom: 16px; 
-  resize: vertical 
-}
+    <div class="footer">
+      <p>Proudly Created By: Zaki Khan, Rachel Levy, Joel Mendoza, and W. Kyle Resurreccion</p>
+    </div>
 
-input[type=submit] {
-  background-color: palevioletred;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type ="text/javascript" src ="../js/contact.js"></script>
 
-input[type=submit]:hover {
-  background-color: palevioletred;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: lightgrey;
-  padding: 20px;
-}
-
-          </style>
-
-    </body>
-</head>
+  </body>
+</html>

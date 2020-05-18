@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    let Organization = sequelize.define('organization', {
+    let Organization = sequelize.define('Organization', {
 
         email: {
             type: DataTypes.STRING,
@@ -23,9 +23,12 @@ module.exports = function (sequelize, DataTypes) {
             unique: true
             },
 
-        otherInquiries: {
+        subject: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: true,
+            validate: {
+                max: 1000
+            }
             },
 
         })

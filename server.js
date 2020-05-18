@@ -5,7 +5,6 @@ let passport = require("passport");
 //import database models here--------------------------
 let db = require("./models");
 
-
 //renames express function to app
 let app = express();
 
@@ -23,6 +22,7 @@ app.use(passport.session());
 
 //import routes here-----------------------------------
 require("./controllers/user-routes.js")(app);
+require("./controllers/organization-routes.js")(app);
 require("./controllers/html-routes.js")(app);
 
 //sync database using sequelize and start our server

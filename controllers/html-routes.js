@@ -22,4 +22,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../views/html/user.html"));
   });
 
+  app.get("/contact_us", authenticateLogin, function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/html/contact.html"));
+  });
+
 };
